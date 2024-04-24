@@ -89,23 +89,12 @@ const BlackScholesCalculator = () => {
 
         </div>
         <div>
-          <h3>Greeks</h3>
+          <h2>Greeks</h2>
           <p>Delta: {delta}</p>
           <p>Gamma: {gamma}</p>
           <p>Theta: {theta}</p>
           <p>Vega: {vega}</p>
           <p>Rho: {rho}</p>
-        </div>
-        <div>
-          <h3>Visualization of Greeks</h3>
-          {/* <LineChart width={400} height={300} data={deltas}>
-            <XAxis dataKey="S" />
-            <YAxis />
-            <CartesianGrid stroke="#eee" strokeDasharray="5 5" />
-            <Tooltip />
-            <Legend />
-            <Line type="monotone" dataKey="delta" stroke="#8884d8" />
-          </LineChart> */}
         </div>
       </div>
     </div>
