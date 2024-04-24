@@ -9,12 +9,6 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from option_calculator import callPriceBlackScholes, putPriceBlackScholes, optionDelta, optionGamma, optionTheta, optionVega, optionRho
 
-# TODO:
-# 1. 確保環境有被打包
-# 2. 界面調整
-# 3. 調整前端 r 跟 vol 的刻度
-# 4. 例外訊息調整
-
 class OptionParams(BaseModel):
     S: float
     K: float
@@ -47,16 +41,16 @@ async def calculate_option_price(option_params: OptionParams):
     sigma = option_params.sigma
     option_type = option_params.type
 
-    # call price and put price
-    call_option_price = callPriceBlackScholes(S, K, r, T, sigma)
-    put_option_price = putPriceBlackScholes(S, K, r, T, sigma)
+    # call price and put price(Rounded to four decimal places)
+    call_option_price = round(callPriceBlackScholes(S, K, r, T, sigma), 4)
+    put_option_price  = round(putPriceBlackScholes(S, K, r, T, sigma), 4)
 
-    # option greeks
-    option_delta = optionDelta(S, K, r, T, sigma, option_type)
-    option_gamma = optionGamma(S, K, r, T, sigma)
-    option_theta = optionTheta(S, K, r, T, sigma, option_type)
-    option_vega  = optionVega(S, K, r, T, sigma)
-    option_rho   = optionRho(S, K, r, T, sigma, option_type)
+    # option greeks(Rounded to four decimal places)
+    option_delta = round(optionDelta(S, K, r, T, sigma, option_type), 4)
+    option_gamma = round(optionGamma(S, K, r, T, sigma), 4)
+    option_theta = round(optionTheta(S, K, r, T, sigma, option_type), 4)
+    option_vega  = round(optionVega(S, K, r, T, sigma), 4)
+    option_rho   = round(optionRho(S, K, r, T, sigma, option_type), 4)
 
     if call_option_price is not None:
         return {

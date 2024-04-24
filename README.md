@@ -12,6 +12,11 @@
 
 ```
 $ cd frontend
+
+# 若第一次開啟可能需要進行安裝
+$ npm install
+
+# 開啟前端
 $ npm start
 ```
 
