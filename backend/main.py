@@ -1,6 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import streamlit as st
+import uvicorn
 
 from pydantic import BaseModel
 from scipy.stats import norm
@@ -66,5 +67,4 @@ async def calculate_option_price(option_params: OptionParams):
         raise HTTPException(status_code=500, detail='Error calculating option price')
 
 if __name__ == '__main__':
-    import uvicorn
     uvicorn.run(app, host="localhost", port=3001)

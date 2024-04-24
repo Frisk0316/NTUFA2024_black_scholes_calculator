@@ -2,7 +2,7 @@
 
 ### 環境與使用程式
 
-* 環境：Ubuntu 22.04
+* 環境：Ubuntu 22.04, Docker 24.0.5
 * 前端：react 18.2.0
 * 後端：Python 3.10.9
 
@@ -13,17 +13,22 @@
 ```
 $ cd frontend
 
-# 若第一次開啟可能需要進行安裝
+// 若第一次開啟可能需要進行安裝
 $ npm install
 
-# 開啟前端
+// 開啟前端
 $ npm start
 ```
 
 2. 開啟後端
 
 ```
+# 第一次開啟可能需要安裝所需軟體
+$ pip3 install -r requirements.txt
+
 $ cd backend 
+
+# 開啟後端程式
 $ python3 main.py
 ```
 
