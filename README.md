@@ -29,8 +29,6 @@ $ python3 main.py
 
 ### 執行結果(以影片展示)
 
-<video width="1920" height="1080" controls>
-    <source src="/option_calculator.mp4">
-</video>
+https://github.com/Frisk0316/NTUFA2024_black_scholes_calculator/assets/79501315/f9895f7a-10ce-4ef4-8177-bffebe8b82e1
 
 
