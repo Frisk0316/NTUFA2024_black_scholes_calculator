@@ -67,4 +67,4 @@ async def calculate_option_price(option_params: OptionParams):
         raise HTTPException(status_code=500, detail='Error calculating option price')
 
 if __name__ == '__main__':
-    uvicorn.run(app, host="localhost", port=3001)
+    uvicorn.run(app, host="0.0.0.0", port=3001)
