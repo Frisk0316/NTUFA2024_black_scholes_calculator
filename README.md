@@ -27,4 +27,10 @@ $ cd backend
 $ python3 main.py
 ```
 
-### 執行結果
+### 執行結果(以影片展示)
+
+<video width="1920" height="1080" controls>
+    <source src="/option_calculator.mp4">
+</video>
+
+
